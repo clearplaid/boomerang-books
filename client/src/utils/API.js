@@ -5,13 +5,10 @@ export default {
   getBooks: function() {
     return axios.get("/api/books");
   },
-  // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
-  },
   // finds all books with searched title from google books
   searchBooks: function (title) {
-    return axios.get("/search", { title: title });
+    // let bookTitle = inputTitle.replace(/\s/g, "+");
+    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + title);
   },
   // Saves a book to the database
   saveBook: function(bookData) {
