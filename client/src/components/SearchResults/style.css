@@ -1,0 +1,31 @@
+.save {
+  background-color: #a147a1;
+  color: white;
+}
+.view {
+  background-color: lightgoldenrodyellow;
+}
+.delete {
+  background-color: rgb(160, 20, 20);
+  color: white;
+}
+.searchResult {
+  margin: 2rem;
+  padding: 2rem;
+}
+.rowBookInfo {
+  display: flex;
+  justify-content: center
+}
+.aboutBook {
+  padding: 1rem;
+}
+button {
+  margin: .25em;
+}
+img {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}

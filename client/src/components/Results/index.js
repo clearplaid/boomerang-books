@@ -6,7 +6,7 @@ function Results(props) {
   if(props.path === "/") {
     return(
         <div id="results">
-            <h3>Search Results</h3>
+            <h3>Search Results:</h3>
             {props.bookData.map((book) => {
               const bookInfo = book.volumeInfo;
               return <SearchResults
@@ -16,7 +16,7 @@ function Results(props) {
               title={bookInfo.title}
               authors={bookInfo.authors}
               description={bookInfo.description}
-              image={bookInfo.imageLinks[1]}
+              image={bookInfo.imageLinks.thumbnail}
               link={bookInfo.canonicalVolumeLink}/>
             })}
         </div>
@@ -25,7 +25,7 @@ function Results(props) {
     if(props.savedBooks.length > 0) {
         return(
             <div id="results">
-                <h3>Saved Books</h3>
+                <h3>Saved Books:</h3>
                 {props.savedBooks.map((book) => {
                   return <SearchResults
                     id={book._id}
@@ -34,7 +34,7 @@ function Results(props) {
                     title={book.title}
                     authors={book.authors}
                     description={book.description}
-                    image={book.img}
+                    image={book.image}
                     link={book.link}/>
                 })}
             </div>
