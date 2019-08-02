@@ -1,5 +1,3 @@
-
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
@@ -18,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user1:passw0rd@ds353007.mlab.com:53007/heroku_z1nt81m8", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_24t7kc4j:j2iv9r7d1pe5r1plv93iard3t2@ds359077.mlab.com:59077/heroku_24t7kc4j", {useNewUrlParser: true});
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", { useNewUrlParser: true });
 
 app.listen(PORT, () => {
